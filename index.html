@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLink</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header start -->
+    <header class="continer header">
+        <a href="#" class="logo">
+            <i class="bi bi-link"></i>
+            <span>devlink</span>
+        </a>
+        <ul>
+            <li>
+                <a href="index.html" class="active"><i class="bi bi-link-45deg"></i> <span>Link</span></a>
+            </li>
+            <li>
+                <a href="profileDetails.html"><i class="bi bi-person-circle"></i> <span>Profile Details</span></a>
+            </li>
+        </ul>
+        <a href="preview.html" class="btn btn-outline"><i class="bi bi-eye"></i> <b>preview</b></a>
+    </header>
+    <!-- Header end -->
+
+    <section class="continer hero">
+        <div class="hero-left">
+            <div class="phone">
+                <div class="phone-screen">
+                    <div class="profile">
+                        <div class="avatar">
+                        </div>
+                        <div class="info" id="profile-info">
+                            <h5 class="name-placeholder"></h5>
+                            <p class="email-placeholder"></p>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <div class="defaults-links">
+                        </div>
+                        <div class="placeholder"></div>
+                        <div class="placeholder"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="hero-right">
+            <div>
+                <div class="section-header">
+                    <h2>Customize your links</h2>
+                    <p>Add/edit/eemove links below and then share all your profile with the world</p>
+                </div>
+                <button class="btn btn-full btn-outline" id="add-link"><i class="bi bi-plus-lg"></i> Add New
+                    Link</button>
+                <form action="" id="links-form">
+                    <div class="hero-link-container mt-30">
+                        <!-- <div class="hero-link">
+                    <div class="link-card-header">
+                        <p class="link-title">Linke #1</p>
+                        <p class="remove">Remove</p>
+                    </div>
+                    <div>
+                        <label for="select-1">Platfrom</label>
+                        <div class="dropdown">
+                            <p class="dropdown-placeldor"><i class="fa-brands fa-github"></i> Github</p>
+                            <div class="dropdown-list">
+                                <p class="dropdown-item" data-value="github"> <i class="fa-brands fa-github"></i> Github
+                                </p>
+                                <p class="dropdown-item" data-value="youtube"> <i class="fa-brands fa-youtube"></i>
+                                    Youtube</p>
+                                <p class="dropdown-item" data-value="linkeding"> <i
+                                        class="fa-brands fa-linkedin"></i>Linkeding</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="input-1">Link</label>
+                        <input type="text" placeholder="Add Link" value="https://github.com/mostafizar-rahman">
+                    </div>
+                </div> -->
+
+                    </div>
+                    <div class="hero-footer mt-30">
+                        <button type="submit" class="btn">Save</button>
+                    </div>
+                    <div id="toast" class="toast">Your Change have been successfully saved!</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal start -->
+    <div class="modal">
+        <div class="modal-container">
+            <p class="close" id="modal-close">Close</p>
+            <form action="" id="link-add-form">
+                <div>
+                    <label for="input-1">Add Icon (only bootstrap icon)</label>
+                    <input type="text" placeholder="Add Icon" value="" name="icon" id="icon-input" required>
+                </div>
+                <div>
+                    <label for="input-2">Add Select Label</Label></label>
+                    <input type="text" placeholder="Add Label" value="" name="label" id="label-input" required>
+                </div>
+                <div>
+                    <label for="input-3">Add Link</label>
+                    <input type="text" placeholder="Add Link" value="" name="link" id="link-input" required>
+                </div>
+                <button type="submit" class="btn btn-full">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="data.js" type="module"></script> -->
+    <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/view.js"></script>
+
+</body>
+
+</html>

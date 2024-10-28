@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Header start -->
+    <header class="continer header">
+        <a href="#" class="logo">
+            <i class="bi bi-link"></i>
+            <span>devlink</span>
+        </a>
+        <ul>
+            <li>
+                <a href="index.html"><i class="bi bi-link-45deg"></i> <span>Link</span></a>
+            </li>
+            <li>
+                <a href="profileDetails.html" class="active"><i class="bi bi-person-circle"></i> <span>Profile Details</span></a>
+            </li>
+        </ul>
+        <a href="preview.html" class="btn btn-outline"><i class="bi bi-eye"></i> <b>preview</b></a>
+    </header>
+    <!-- Header end -->
+
+    <section class="continer hero">
+        <div class="hero-left">
+            <div class="phone">
+                <div class="phone-screen">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="assets/images/profile.jpg" alt="" id="profile-img-preview">
+                        </div>
+                        <div class="info" id="profile-info">
+                            <h5 class="userName">Mostafizar Rahman</h5>
+                            <p class="userEmail"> dev.mostafizar@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="links">
+                        <div class="defaults-links">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="section-header">
+                <h2>Profile Details</h2>
+                <p>Add your details to create a personal touch to your profile.</p>
+            </div>
+
+            <div>
+                <form action="" class="hero-link-container" id="profile-form">
+                    <div class="profile-picture">
+                        <div class="input-label">
+                            <span>Profile Picture</span>
+                        </div>
+                        <div class="input-filed">
+                            <div>
+                                <label for="profile-image">
+                                    <img src="assets/images/profile.jpg" alt="" id="image-preview">
+                                    <span>
+                                        <i class="bi bi-image"></i>
+                                        Change Image
+                                    </span>
+                                </label>
+                                <input type="file" name="" id="profile-image" hidden>
+                            </div>
+                            <small>Image must be below 1024px * 1024px, Use PNG, JPG, or BMP fromat</small>
+                        </div>
+                    </div>
+                    <div class="profile-details">
+                        <div class="input-group">
+                            <div class="input-label">
+                                <span>First Name*</span>
+                            </div>
+                            <div class="input-filed">
+                                <input type="text" placeholder="First Name" name="firstName" id="firstName"
+                                    value="Mostafizar">
+                                <span class="error first-name-error">err</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-label">
+                                <span>Last Name*</span>
+                            </div>
+                            <div class="input-filed">
+                                <input type="text" placeholder="Last Name" name="lastName" id="lastName" value="Rahman">
+                                <span class="error last-name-error"></span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-label">
+                                <span>Email</span>
+                            </div>
+                            <div class="input-filed">
+                                <input type="email" placeholder="Email" name="email" id="email"
+                                    value="dev.mostafizar@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-footer profile-footer">
+                        <button type="submit" class="btn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="toast" class="toast">Your Change have been successfully saved! </div>
+
+    </section>
+
+    <script type="module" src="assets/js/profile.js"></script>
+</body>
+
+</html>

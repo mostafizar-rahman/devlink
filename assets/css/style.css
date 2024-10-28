@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: rgba(99, 59, 254, 1);
+    --secondary-color: rgba(250, 250, 250, 1);
+    --para-color: rgb(122, 122, 122);
+    --border-color: rgb(175, 175, 175);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    font-size: 65.5%;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+span {
+    font-size: 1.5rem;
+    color: var(--para-color);
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    /* color: var(--para-color); */
+    padding-bottom: 0.3rem;
+}
+
+.continer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.0rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.btn b {
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+input {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    outline: none;
+    color: var(--para-color);
+    font-size: 1.5rem;
+}
+
+input::placeholder {
+    font-weight: normal;
+    color: #d1d1d1;
+}
+
+input:focus {
+    border: 1px solid var(--primary-color);
+    box-shadow: rgba(99, 59, 254, 0.1) 0px 4px 16px, rgba(99, 59, 254, 0.1) 0px 8px 32px;
+}
+
+.mt-30 {
+    margin-top: 3.0rem;
+}
+
+.mt-100 {
+    margin-top: 10rem;
+}
+
+/* ----------------- Header start */
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.0rem 3.0rem;
+    border-radius: 1rem;
+}
+
+.header .logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .logo i {
+    font-size: 2.0rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.header .logo span {
+    font-size: 2.0rem;
+    color: #000;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    /* gap: 2.0rem; */
+}
+
+.header ul li a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.0rem 3.0rem;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header ul li a i {
+    font-size: 1.6rem;
+}
+
+.header ul li {
+    transition: all 0.5s;
+    border-radius: 0.8rem;
+}
+
+.header ul li .active,
+.header ul li:hover {
+    background-color: rgba(239, 236, 255, 1);
+    color: var(--primary-color);
+}
+
+.header .btn i {
+    display: none;
+}
+
+/* ----------------- Hero start --------------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.0rem;
+    margin-top: 2.0rem;
+}
+
+.hero .section-header h2 {
+    font-size: 3.0rem;
+}
+
+.hero .section-header p {
+    color: var(--para-color);
+    font-size: 1.4rem;
+    padding-bottom: 3.5rem;
+    padding-top: 1.0rem;
+}
+
+.hero-right {
+    width: 60%;
+    padding: 3.5rem;
+}
+
+.hero-right>div {
+    max-height: calc(100vh - 21vh);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hero-right>div::-webkit-scrollbar {
+    display: none;
+}
+
+.hero-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6.5rem 3.5rem;
+}
+
+.hero-right,
+.hero-left {
+    background: white;
+    border-radius: 1rem;
+}
+
+.hero-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.0rem;
+}
+
+.hero-link {
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+}
+
+.hero-link .link-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-link .remove {
+    color: var(--para-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.hero-link .remove:hover {
+    color: #e4405f;
+}
+
+.hero-link .link-title {
+    position: relative;
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--para-color);
+}
+
+.hero-link .link-title::after,
+.hero-link .link-title::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 2px;
+    background-color: var(--para-color);
+}
+
+.hero-link .link-title::after {
+    margin-top: -3px;
+}
+
+.hero-link .link-title::before {
+    margin-top: 3px;
+}
+
+.hero-link label {
+    display: flex;
+}
+
+.hero-link select,
+.hero-link input {
+    display: flex;
+    width: 100%;
+}
+
+/* ----------- Hero End------------- */
+
+/* ----------- Profile Details start ------------- */
+.hero .profile-picture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 1.0rem;
+}
+
+.hero .profile-picture .input-label {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 30%;
+}
+
+.hero .profile-picture .input-filed {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.hero .profile-picture .input-filed small {
+    font-size: 1.2rem;
+    color: var(--para-color);
+    line-height: 1.4;
+}
+
+.hero .profile-picture .input-filed label {
+    position: relative;
+    height: 18rem;
+    width: 18rem;
+}
+
+.hero .profile-picture .input-filed label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.hero .profile-picture .input-filed span {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: rgba(30, 29, 37, 0.507);
+    z-index: 99;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.hero .profile-picture .input-filed span i {
+    font-size: 2.5rem;
+}
+
+.hero .profile-picture .input-filed label:hover span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero .profile-details {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 1.0rem;
+}
+
+.hero .profile-details .input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.hero .profile-details .input-group:last-child {
+    margin-bottom: 0;
+}
+
+.hero .profile-details .input-group .input-label {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 30%;
+}
+
+.hero .profile-details .input-group .input-filed {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 70%;
+}
+
+.hero .profile-details .input-group .input-filed input {
+    /* color: #000; */
+    font-weight: 500;
+
+}
+
+.error {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.hero-footer {
+    padding-top: 2.0rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0.5rem;
+}
+
+.profile-footer{
+    margin-top: 10rem;
+}
+
+/* ------------ preview page start ------- */
+.preview-banner {
+    background-color: var(--primary-color);
+    padding-top: 2.0rem;
+    padding-bottom: 25rem;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    /* max-width: 1400px;
+    margin: auto; */
+}
+
+.link-preview-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -12rem;
+}
+
+.link-preview-container .phone {
+    /* width: 350px; */
+    height: auto;
+    border-radius: 2.0rem;
+    padding: 0 2rem 2rem 2rem;
+    border: none;
+    box-shadow: rgba(99, 59, 254, 0.1) 0px 4px 16px, rgba(99, 59, 254, 0.1) 0px 8px 32px;
+}
+
+.link-preview-container .phone::after {
+    display: none;
+}
+
+.link-preview-container .phone-screen {
+    border: none;
+}
+
+.link-preview-container .phone-screen .profile .info h5 {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.link-preview-container .phone-screen .link:hover {
+    opacity: 0.7;
+}
+
+/* ------------ preview page end ------- */
+
+/* ------------ dropdown -----------*/
+.dropdown {
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.dropdown-placeldor {
+    height: 40px;
+    width: 100%;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--para-color);
+    cursor: pointer;
+}
+
+.dropdown-placeldor span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dropdown-placeldor i {
+    line-height: normal;
+    font-size: 1.3rem;
+}
+
+.dropdown-list {
+    border: 1px solid var(--border-color);
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.0rem 0;
+    /* gap: 1.0rem; */
+    /* visibility: hidden;
+    opacity: 0;
+    height: 0; */
+    display: none;
+    transition: all 0.5s;
+    z-index: 99;
+}
+
+.dropdown-list.active {
+    /* visibility: visible;
+    opacity: 1;
+    height: auto; */
+    display: block;
+}
+
+.dropdown-list .dropdown-item {
+    width: 100%;
+    padding: 7px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--para-color);
+}
+
+.dropdown-list .dropdown-item i {
+    line-height: normal;
+    font-size: 1.3rem;
+}
+
+.dropdown-list .dropdown-item:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+
+/* --------------- modal------------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 250, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+.modal.active {
+    transform: scale(1);
+}
+
+.modal-container {
+    position: relative;
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+
+}
+
+.modal-container .close {
+    position: absolute;
+    right: 1.0rem;
+    top: 1.0rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+.modal-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.0rem;
+    padding-top: 2.0rem;
+}
+
+.modal-container label {
+    color: white;
+    /* padding-bottom: 5px; */
+}
+
+.modal-container .btn {
+    padding: 1.0rem;
+    background-color: white;
+    color: #000;
+}
+
+/* -------------- Modal end ------------------ */
+
+/* --------------- tost message start --------- */
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
+
+/* --------------- tost message end --------- */
+
+
+
+/* ------------- Phone shape start -------------- */
+.phone {
+    width: 330px;
+    height: 660px;
+    background-color: white;
+    border-radius: 5rem;
+    padding: 1.2rem;
+    position: relative;
+    border: 2px solid #ddd;
+}
+
+.phone::after {
+    content: '';
+    position: absolute;
+    background: white;
+    top: 0.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.0rem;
+    width: 11rem;
+    background-image: url('../images/notch.png');
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ddd;
+    border-radius: 4rem;
+    padding: 2.0rem;
+    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.phone-screen::-webkit-scrollbar {
+    display: none;
+}
+
+.phone-screen .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.phone-screen .profile .avatar {
+    width: 9rem;
+    height: 9rem;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.phone-screen .profile .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.phone-screen .profile .info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-screen .profile .info h5 {
+    font-size: 2.0rem;
+    /* color: var(--para-color); */
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.phone-screen .profile .info p {
+    color: var(--para-color);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.phone-screen .profile .info .name-placeholder,
+.phone-screen .profile .info .email-placeholder {
+    width: 12rem;
+    height: 1.2rem;
+    background-color: #e0e0e0;
+    border-radius: 1.0rem;
+    margin-bottom: 0.8rem;
+}
+
+.phone-screen .profile .info .name-placeholder {
+    width: 18rem;
+    height: 1.6rem;
+}
+
+
+.phone-screen .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+
+.phone-screen .links .defaults-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.phone-screen .links .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 2rem;
+    border-radius: 0.7rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.phone-screen .links .link span {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.phone-screen .links .link i {
+    margin-right: 0.7rem;
+    color: white;
+}
+
+.phone-screen .links .link .arrow {
+    font-size: 1.4rem;
+}
+
+
+.phone-screen .links .link {
+    background-color: #06b500;
+}
+
+.phone-screen .links .github {
+    background-color: #333;
+}
+
+.phone-screen .links .youtube {
+    background-color: #ff0000;
+}
+
+.phone-screen .links .linkedin {
+    background-color: #0077b5;
+}
+
+.phone-screen .links .facebook {
+    background-color: #3b5998;
+}
+
+.phone-screen .links .twitter {
+    background-color: #1da1f2;
+}
+
+.phone-screen .links .instagram {
+    background-color: #e4405f;
+}
+
+.phone-screen .links .placeholder {
+    height: 4.4rem;
+    background-color: #e0e0e0;
+    border-radius: 0.7rem;
+}
+
+
+
+/* ----------- brackpoint--------- */
+@media (max-width:992px) {
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left {
+        display: none;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .profile-footer{
+        margin-top: 0;
+    }
+}
+
+@media (max-width:576px) {
+    .header .logo span {
+        display: none;
+    }
+
+    .header ul li a span {
+        display: none;
+    }
+
+    .header .btn {
+        padding: 0.8rem 1.6rem;
+    }
+
+    .header .btn i {
+        display: block;
+        font-size: 1.7rem;
+    }
+
+    .header .btn b {
+        display: none;
+    }
+
+    .hero .profile-picture,
+    .hero .profile-picture .input-filed,
+    .hero .profile-details .input-group {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .hero .profile-picture .input-label{
+        margin-bottom: 0.5rem;
+    }
+
+    .hero .profile-details .input-group {
+        margin-bottom: 1.8rem;
+    }
+
+    .hero .profile-details .input-group .input-filed {
+        width: 100%;
+        margin-top: 0.3rem;
+    }
+}
